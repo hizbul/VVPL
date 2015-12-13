@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1000.0" stylesheets="@../css/layout.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacymanagement.fxml.ApotekerLayoutController">
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="1000.0" stylesheets="@../css/layout.css">
+         <top>
+            <MenuBar prefHeight="8.0" prefWidth="1366.0" stylesheets="@../css/layout.css" BorderPane.alignment="CENTER">
+              <menus>
+                  <Menu mnemonicParsing="false" text="Aksi">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#gotoLogout" text="Logout" />
+                    </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Resep">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#gotoResepMasuk" text="Resep Masuk" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Obat">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#gotoListObat" text="List Obat" />
+                        <MenuItem mnemonicParsing="false" onAction="#gotoCatatPemusnahan" text="Catat Pemusnahan Obat" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

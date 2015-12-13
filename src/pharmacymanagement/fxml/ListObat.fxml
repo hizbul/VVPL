@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1000.0" styleClass="background-whitesmoke" stylesheets="@../css/layout.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacymanagement.fxml.ListObatController">
+   <children>
+      <Label layoutX="28.0" layoutY="26.0" styleClass="label-header" text="List Obat" underline="true" />
+      <TableView fx:id="tableObat" layoutX="28.0" layoutY="78.0" prefHeight="344.0" prefWidth="940.0">
+        <columns>
+          <TableColumn fx:id="columnKodeObat" prefWidth="75.0" text="Kode Obat" />
+          <TableColumn fx:id="columnNamaObat" prefWidth="110.0" text="Nama Obat" />
+            <TableColumn fx:id="columnKategori" prefWidth="104.0" text="Kategori Obat" />
+            <TableColumn fx:id="columnSubKategori" prefWidth="145.0" text="Sub Kategori" />
+            <TableColumn fx:id="columnKemasan" prefWidth="86.0" text="Kemasan" />
+            <TableColumn fx:id="columnHarga" prefWidth="100.0" text="Harga" />
+            <TableColumn fx:id="columnStok" prefWidth="66.0" text="Stok" />
+            <TableColumn fx:id="columnKeterangan" prefWidth="245.0" text="Keterangan" />
+        </columns>
+      </TableView>
+      <TextField fx:id="inSearch" layoutX="672.0" layoutY="27.0" onKeyTyped="#inSearchAction" prefHeight="34.0" prefWidth="296.0" />
+      <Button fx:id="btnCetakObat" layoutX="850.0" layoutY="433.0" mnemonicParsing="false" onAction="#btnCetakObatAction" prefHeight="44.0" prefWidth="118.0" text="Cetak Stok Obat" />
+   </children>
+</AnchorPane>

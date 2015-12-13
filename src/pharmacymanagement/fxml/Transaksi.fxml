@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1000.0" stylesheets="@../css/layout.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="pharmacymanagement.fxml.TransaksiController">
+   <children>
+      <TabPane prefHeight="500.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="List Transaksi">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background-whitesmoke">
+                     <children>
+                        <Label layoutX="34.0" layoutY="37.0" styleClass="label-header" text="List Transaksi Masuk" underline="true" />
+                        <TableView fx:id="tableTransaksi" layoutX="34.0" layoutY="97.0" prefHeight="299.0" prefWidth="921.0">
+                          <columns>
+                            <TableColumn fx:id="columnKodeResep" prefWidth="165.0" text="Kode Resep" />
+                            <TableColumn fx:id="columnDokter" prefWidth="199.0" text="Dokter" />
+                              <TableColumn fx:id="columnSpesialis" prefWidth="245.0" text="Spesialis" />
+                              <TableColumn fx:id="columnStatus" prefWidth="302.0" text="Status" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="inSearchTransaksi" layoutX="638.0" layoutY="38.0" prefHeight="34.0" prefWidth="317.0" />
+                        <Button fx:id="btnLayani" layoutX="855.0" layoutY="418.0" mnemonicParsing="false" onAction="#btnLayaniAction" prefHeight="37.0" prefWidth="100.0" text="Layani" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Layani">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background-whitesmoke">
+                     <children>
+                        <Label layoutX="42.0" layoutY="30.0" styleClass="label-header" text="Transaksi" underline="true" />
+                        <Label layoutX="42.0" layoutY="79.0" styleClass="label-form" text="Identitas Pasien" underline="true" />
+                        <Label layoutX="59.0" layoutY="117.0" styleClass="label-form" text="ID Pasien :" />
+                        <Label layoutX="55.0" layoutY="172.0" styleClass="label-form" text="Nama Pasien :" />
+                        <Label layoutX="54.0" layoutY="223.0" styleClass="label-form" text="Umur :" />
+                        <Label layoutX="37.0" layoutY="271.0" styleClass="label-form" text="Identitas Dokter" underline="true" />
+                        <Label layoutX="54.0" layoutY="308.0" styleClass="label-form" text="Nama Dokter :" />
+                        <Label layoutX="51.0" layoutY="360.0" styleClass="label-form" text="Spesialis :" />
+                        <TextField fx:id="inIDPasien" layoutX="186.0" layoutY="118.0" prefHeight="34.0" prefWidth="247.0" />
+                        <TextField fx:id="inNamaPasien" layoutX="186.0" layoutY="168.0" prefHeight="34.0" prefWidth="244.0" />
+                        <TextField fx:id="inUmur" layoutX="186.0" layoutY="219.0" prefHeight="34.0" prefWidth="246.0" />
+                        <TextField fx:id="inNamaDokter" layoutX="186.0" layoutY="305.0" prefHeight="34.0" prefWidth="244.0" />
+                        <TextField fx:id="inSpesialis" layoutX="186.0" layoutY="356.0" prefHeight="34.0" prefWidth="245.0" />
+                        <Label layoutX="500.0" layoutY="79.0" styleClass="label-form" text="Resep" underline="true" />
+                        <Label layoutX="524.0" layoutY="118.0" styleClass="label-form" text="Kode Resep :" />
+                        <Label layoutX="524.0" layoutY="173.0" styleClass="label-form" text="Daftar Obat :" />
+                        <TextField fx:id="inKodeResep" layoutX="651.0" layoutY="114.0" prefHeight="34.0" prefWidth="298.0" />
+                        <TableView fx:id="tableObat" layoutX="651.0" layoutY="171.0" prefHeight="200.0" prefWidth="323.0">
+                          <columns>
+                            <TableColumn fx:id="columnNamaObat" prefWidth="96.0" text="Nama Obat" />
+                            <TableColumn fx:id="columnHarga" prefWidth="90.0" text="Harga" />
+                              <TableColumn fx:id="columnQty" prefWidth="39.0" text="Qty" />
+                              <TableColumn fx:id="columnTotal" prefWidth="92.0" text="Total" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnBayar" layoutX="881.0" layoutY="407.0" mnemonicParsing="false" onAction="#btnBayarAction" prefHeight="43.0" prefWidth="84.0" text="Bayar" />
+                        <Button fx:id="tbnBatal" layoutX="775.0" layoutY="408.0" mnemonicParsing="false" onAction="#btnBatalAction" prefHeight="42.0" prefWidth="88.0" text="Batal" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

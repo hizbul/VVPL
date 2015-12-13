@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1000.0" stylesheets="@../css/layout.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="pharmacymanagement.fxml.PemusnahanObatController">
+   <children>
+      <SplitPane dividerPositions="0.616" prefHeight="500.0" prefWidth="1000.0">
+         <items>
+            <AnchorPane prefHeight="499.0" prefWidth="577.0">
+               <children>
+                  <TableView fx:id="tableObat" layoutX="24.0" layoutY="80.0" prefHeight="397.0" prefWidth="569.0">
+                    <columns>
+                      <TableColumn fx:id="columnKodeObat" prefWidth="107.0" text="Kode Obat" />
+                      <TableColumn fx:id="columnNamaObat" prefWidth="110.0" text="nama Obat" />
+                        <TableColumn fx:id="columnKategori" prefWidth="115.0" text="kategori" />
+                        <TableColumn fx:id="columnSubKategori" minWidth="0.0" prefWidth="156.0" text="Sub Kategori" />
+                        <TableColumn fx:id="columnStok" prefWidth="71.0" text="Stok" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="inSearch" layoutX="87.0" layoutY="32.0" prefHeight="34.0" prefWidth="506.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="499.0" prefWidth="419.0">
+               <children>
+                  <Label layoutX="21.0" layoutY="31.0" styleClass="label-header" text="Catat Pemusnahan Obat" underline="true" />
+                  <Label layoutX="21.0" layoutY="94.0" styleClass="label-form" text="Kode Obat :" />
+                  <Label layoutX="21.0" layoutY="147.0" styleClass="label-form" text="Nama Obat :" />
+                  <Label layoutX="21.0" layoutY="199.0" styleClass="label-form" text="Kategori :" />
+                  <Label layoutX="21.0" layoutY="254.0" styleClass="label-form" text="Sub Kategori :" />
+                  <Label layoutX="21.0" layoutY="310.0" prefHeight="27.0" prefWidth="176.0" styleClass="label-form" text="Jumlah Pemusnahan :" />
+                  <TextField fx:id="inKodeObat" layoutX="145.0" layoutY="91.0" prefHeight="34.0" prefWidth="214.0" />
+                  <TextField fx:id="inNamaObat" layoutX="145.0" layoutY="143.0" prefHeight="34.0" prefWidth="214.0" />
+                  <TextField fx:id="inKategori" layoutX="145.0" layoutY="195.0" prefHeight="34.0" prefWidth="214.0" />
+                  <TextField fx:id="inSubKategori" layoutX="145.0" layoutY="250.0" prefHeight="34.0" prefWidth="214.0" />
+                  <TextField fx:id="inJmlPemusnahan" layoutX="215.0" layoutY="307.0" prefHeight="34.0" prefWidth="144.0" />
+                  <Button fx:id="btnSave" layoutX="268.0" layoutY="419.0" mnemonicParsing="false" onAction="#btnSaveAction" prefHeight="35.0" prefWidth="94.0" text="Simpan" />
+                  <Button fx:id="btnCancel" layoutX="165.0" layoutY="420.0" mnemonicParsing="false" onAction="#btnCancelAction" prefHeight="34.0" prefWidth="94.0" text="Cancel" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

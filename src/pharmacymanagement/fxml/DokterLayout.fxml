@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="500.0" styleClass="background-whitesmoke" stylesheets="@../css/layout.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="pharmacymanagement.fxml.DokterLayoutController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="500.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Aksi">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#gotoLogout" text="Logout" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Resep">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#gotoAddResep" text="Add Resep" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
