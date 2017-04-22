@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1000.0" styleClass="background-whitesmoke" stylesheets="@../css/layout.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacymanagement.fxml.KelolaAccountController">
+   <children>
+      <SplitPane dividerPositions="0.495" prefHeight="510.0" prefWidth="1000.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="29.0" layoutY="30.0" styleClass="label-header" text="Form Pengelolaan Akun" underline="true" />
+                  <Label layoutX="29.0" layoutY="109.0" styleClass="label-form" text="Kode Akun :" />
+                  <Label layoutX="29.0" layoutY="155.0" styleClass="label-form" text="Username :" />
+                  <Label layoutX="29.0" layoutY="204.0" styleClass="label-form" text="Password :" />
+                  <Label layoutX="29.0" layoutY="255.0" styleClass="label-form" text="Jabatan :" />
+                  <Label layoutX="25.0" layoutY="385.0" styleClass="label-form" text="Dokter :" />
+                  <TextField fx:id="inKodeAkun" layoutX="142.0" layoutY="106.0" prefHeight="34.0" prefWidth="330.0" />
+                  <TextField fx:id="inUsername" layoutX="142.0" layoutY="152.0" prefHeight="34.0" prefWidth="330.0" />
+                  <TextField fx:id="inPassword" layoutX="142.0" layoutY="201.0" prefHeight="34.0" prefWidth="330.0" />
+                  <TextField fx:id="inJabaran" layoutX="142.0" layoutY="252.0" onInputMethodTextChanged="#jabatanAction" prefHeight="34.0" prefWidth="330.0" />
+                  <ChoiceBox fx:id="inDokter" layoutX="138.0" layoutY="379.0" onInputMethodTextChanged="#inDokterTextChanged" onKeyReleased="#inDokterActionRelease" prefHeight="34.0" prefWidth="330.0" />
+                  <Button fx:id="btnNew" layoutX="409.0" layoutY="31.0" mnemonicParsing="false" onAction="#btnNewAction" prefHeight="33.0" prefWidth="63.0" text="Baru" />
+                  <Button fx:id="btnSave" layoutX="405.0" layoutY="306.0" mnemonicParsing="false" onAction="#btnSaveAction" prefHeight="33.0" prefWidth="63.0" text="Simpan" />
+                  <Button fx:id="btnEdit" layoutX="334.0" layoutY="307.0" mnemonicParsing="false" onAction="#btnEditAction" prefHeight="33.0" prefWidth="63.0" text="Ubah" />
+                  <Button fx:id="btnDelete" layoutX="260.0" layoutY="307.0" mnemonicParsing="false" onAction="#btnDeleteAction" prefHeight="33.0" prefWidth="63.0" text="Hapus" />
+                  <Button fx:id="btnSimpanAkun" layoutX="385.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnSimpanAkunAction" prefHeight="33.0" prefWidth="83.0" text="Simpan Akun" />
+                  <Button fx:id="btnUpdateAkun" layoutX="293.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnUpdateAkunAction" prefHeight="33.0" prefWidth="83.0" text="Update Akun" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="509.0" prefWidth="695.0">
+               <children>
+                  <TableView fx:id="tableAccount" layoutX="30.0" layoutY="102.0" onMouseClicked="#tableAccountAction" prefHeight="369.0" prefWidth="442.0">
+                    <columns>
+                      <TableColumn fx:id="columnKode" prefWidth="84.0" text="Kode Akun" />
+                      <TableColumn fx:id="columnUsername" prefWidth="88.0" text="Username" />
+                        <TableColumn fx:id="columnPassword" prefWidth="121.0" text="Password" />
+                        <TableColumn fx:id="columnJabatan" prefWidth="139.0" text="Jabatan" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="inSearch" layoutX="201.0" layoutY="31.0" onKeyTyped="#inSearchAction" prefHeight="34.0" prefWidth="271.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

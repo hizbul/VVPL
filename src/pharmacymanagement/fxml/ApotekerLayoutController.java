@@ -5,11 +5,13 @@
  */
 package pharmacymanagement.fxml;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import pharmacymanagement.PharmacyManagement;
 
 /**
  * FXML Controller class
@@ -21,25 +23,36 @@ public class ApotekerLayoutController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+    
+    private PharmacyManagement mainApp;
 
-    @FXML
-    private void gotoLogout(ActionEvent event) {
+    public void setMainApp(PharmacyManagement mainApp) {
+       this.mainApp = mainApp;
     }
 
     @FXML
-    private void gotoResepMasuk(ActionEvent event) {
+    private void gotoLogout(ActionEvent event) throws IOException {
+        mainApp.initLoginLayout();
     }
 
     @FXML
-    private void gotoListObat(ActionEvent event) {
+    private void gotoResepMasuk(ActionEvent event) throws IOException {
+        mainApp.showResepMasuk();
     }
 
     @FXML
-    private void gotoCatatPemusnahan(ActionEvent event) {
+    private void gotoListObat(ActionEvent event) throws IOException {
+        mainApp.showListObat();
+    }
+
+    @FXML
+    private void gotoCatatPemusnahan(ActionEvent event) throws IOException {
+        mainApp.showCatatPemusnahan();
     }
     
 }

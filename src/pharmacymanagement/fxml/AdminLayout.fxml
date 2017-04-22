@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1000.0" styleClass="background-whitesmoke" stylesheets="@../css/layout.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacymanagement.fxml.AdminLayoutController">
+   <children>
+      <BorderPane prefHeight="542.0" prefWidth="1000.0" styleClass="background-whitesmoke">
+         <top>
+            <MenuBar prefHeight="29.0" prefWidth="358.0" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Aksi">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#gotoLogout" text="Logout" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Obat">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#gotoKelolaObat" text="Pengelolaan Obat" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Akun">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#gotoKelolaDokter" text="Kelola Dokter" />
+                    <MenuItem mnemonicParsing="false" onAction="#gotoKelolaAkun" text="Kelola Akun" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
